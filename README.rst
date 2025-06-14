@@ -14,7 +14,7 @@ Install
 
 .. code-block:: bash
 
-    sudo pipx install git+https://gitlab.com/charles.gargasson/rsm.git@main --global
+    sudo pipx install git+https://github.com/charlesgargasson/rsm.git@main --global
     # sudo pipx uninstall rsm
     # sudo pipx upgrade rsm
 
