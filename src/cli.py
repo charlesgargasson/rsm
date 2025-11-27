@@ -79,7 +79,9 @@ async def asyncmain() -> None:
     await asyncio.gather(*tasks)
 
 def main() -> None:
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    #loop = asyncio.get_event_loop()
     loop.run_until_complete(asyncmain())
 
 if __name__ == '__main__':
