@@ -273,7 +273,9 @@ def main() -> None:
         LISTENERS.append('0.0.0.0:1337')
         if os.geteuid() == 0:
             LISTENERS.append('0.0.0.0:53')
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    #loop = asyncio.get_event_loop()
     loop.run_until_complete(asyncmain(LISTENERS))
 
 if __name__ == '__main__':
